@@ -1,9 +1,19 @@
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
 @import url('https://fonts.cdnfonts.com/css/angel-club');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import "@react-aria/example-theme";
+
+:root{
+  font-size: 14px;
+}
+@media (min-width:640px) {
+  :root {font-size: 16px;}
+}
+@media (min-width:1024px) {
+  :root {font-size: 18px;}
+}
 
 body {
    -webkit-font-smoothing: antialiased;
@@ -12,6 +22,7 @@ body {
     background-color: #f9f9f9;
     color: #28282B;
 }
+
 ::placeholder {
   font-family: 'Helvetica Neue',sans-serif;
 }
@@ -24,6 +35,25 @@ body {
 .logotext {
   font-family:'Angel Club','Helvetica Neue',sans-serif ;
 }
+
+
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Optional: Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #28282B;
+  border-radius: 15px;
+  border: 0.4rem solid transparent;
+  background-clip: content-box;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

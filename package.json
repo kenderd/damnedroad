@@ -1,5 +1,5 @@
 {
-  "name": "damnedroad",
+  "name": "damned-road",
   "version": "0.1.0",
   "private": true,
   "description": "A Web3-powered digital product place.",
@@ -12,8 +12,13 @@
   "dependencies": {
     "@react-aria/example-theme": "^1.0.3",
     "@tanstack/react-query": "^5.51.23",
+    "@walletconnect/utils": "^2.15.0",
+    "@web3modal/siwe": "^5.1.0",
     "@web3modal/wagmi": "^5.1.0",
+    "firebase": "^10.13.0",
+    "framer-motion": "^11.3.28",
     "next": "14.2.5",
+    "next-auth": "^4.24.7",
     "react": "^18",
     "react-aria": "^3.34.1",
     "react-aria-components": "^1.3.1",
