@@ -1,5 +1,6 @@
 import AccountProvider from "@/lib/providers/AccountProvider";
 import AppKitProvider from "@/lib/providers/AppKitProvider";
+import SearchProvider from "@/lib/providers/SearchProvider";
 import { config } from "@/lib/wagmiConfig";
 import { SessionProvider } from "next-auth/react";
 import { headers } from "next/headers";
@@ -13,7 +14,9 @@ export default async function MyProviders({
   const initialState = cookieToInitialState(config, headers().get("cookie"));
   return (
     <AppKitProvider initialState={initialState}>
-      <AccountProvider>{children}</AccountProvider>
+      <AccountProvider>
+        <SearchProvider>{children}</SearchProvider>
+      </AccountProvider>
     </AppKitProvider>
   );
 }

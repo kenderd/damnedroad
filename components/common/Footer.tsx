@@ -9,7 +9,7 @@ export default function Footer() {
         <Link href={"https://walletconnect.com"} target="_blank">
           <strong>WalletConnect</strong>
         </Link>
-        's{" "}
+        &apos;s{" "}
         <Link
           href="https://build-the-new-internet.devfolio.co/overview"
           target="_blank"

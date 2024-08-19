@@ -4,7 +4,7 @@ import Providers from "./providers";
 import Navbar from "@/components/common/Navbar";
 import { Link } from "react-aria-components";
 import Footer from "@/components/common/Footer";
-
+import "viem/window";
 
 export const metadata: Metadata = {
   title: "damnedRoad",

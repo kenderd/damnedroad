@@ -8,7 +8,10 @@ description:string,
 creator:string,
 price:number,
 preview_image:string,
+product:string
 created:Timestamp,
+contract_product_id:number,
+product_file_name:string,
 
 
 }

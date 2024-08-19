@@ -1,5 +1,5 @@
 "use client"
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { config, projectId, metadata } from "../wagmiConfig";
 
 import { createWeb3Modal } from "@web3modal/wagmi/react";
@@ -8,6 +8,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { State, WagmiProvider } from "wagmi";
 import { siweConfig } from "../siweConfig";
+import { createPublicClient, createWalletClient, custom, getContract, http } from "viem";
+import { sepolia } from "viem/chains";
+import { ABI } from "../ABI";
 
 // Setup queryClient
 const queryClient = new QueryClient();
@@ -40,6 +43,8 @@ export default function AppKitProvider({
   children: ReactNode;
   initialState?: State;
 }) {
+
+  
   return (
     <WagmiProvider config={config} initialState={initialState}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
